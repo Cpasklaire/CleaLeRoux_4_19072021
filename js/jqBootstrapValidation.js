@@ -172,6 +172,7 @@
             // ---------------------------------------------------------
             //                                                    NUMBER
             // ---------------------------------------------------------
+            
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "number") {
               message = settings.builtInValidators.number.message;
               if ($this.data("validationNumberMessage")) {
@@ -401,7 +402,7 @@
           $this.bind(
             "validation.validation",
             function (event, params) {
-
+              
               var value = getValue($this);
 
               // Get a list of the errors to apply
@@ -433,7 +434,7 @@
           // =============================================================
           $this.bind(
             "submit.validation",
-            function () {
+            function () { 
               return $this.triggerHandler("change.validation", {submitting: true});
             }
           );
